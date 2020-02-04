@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./index.css" rel="stylesheet" type="text/css">
+    <script src="./vue.min.js"></script>
+    <title>FONT QUICK TEST</title>
+</head>
+
+<body>
+    <div id="app">
+        <p>Press Command+Shift+R to Forcely refresh the page.</p>
+        LOCAL FONT OVERRIDE=<input type="text" v-model.lazy="localfont"><br>
+        FONTSIZE=<input type="text" v-model.lazy="ftsize"><br>
+        FONTWEIGHT=<input type="text" v-model.lazy="fweight"><br>
+        UNDERLINE<input type="checkbox" v-model="is_underlined"><br>
+        ITALIC<input type="checkbox" v-model="is_italic"><br>
+        <div contenteditable="true" class="test" :style="vstyle">
+            <p class="test" :style="vstyle">
+                Hx{$#S
+                <br>
+                1liI|!
+                <br>
+                aoeO0
+                <br>
+                简体中文测试简体中文测试简体中文测试繁體中試測繁體中文测试我个人推荐FALLBACK字体采用幼圆体字
+                <br>
+                abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+                <br>
+                `\'\"(middle-dot)·.,:;
+                <br>
+                (C(GC))
+                <br>
+                -._-_
+                <br>
+                3g9q
+                <br>
+                b6
+                <br>
+                B83
+                <br>
+                z2Z
+                <br>
+                GCc
+                <br>
+                GOGCG0GD
+                <br>
+                mnmnMNMN
+                <br>
+                cCiIjJkKlL
+                <br>
+                oOpPsSuUvVwWxXzZ
+                <br>
+                ()[]{}({({})})
+                <br>
+                != <=>=
+                    <br>
+                    The quick brown fox jumps over the lazy dog
+                    <br>
+                    abcdefghijklmnopqrstuvwxyz
+                    <br>
+                    ABCDEFGHIJKLMNOPQRSTUVWXYZ
+                    <br>
+                    1234567890
+                    <br>
+                    fallback, full-stack, doing the best, try your best,
+            </p>
+        </div>
+    </div>
+    <script>
+        let v = new Vue(
+            {
+                el: "#app",
+                data: {
+                    localfont:'',
+                    ftsize: 16,
+                    is_underlined: true,
+                    fweight: 400,
+                    is_italic: false
+                },
+                methods: {
+
+                },
+                computed: {
+                    vstyle() {
+                        let styleobj = {
+                            'font-family':this.localfont?this.localfont:'',
+                            'font-size': this.ftsize + 'px',
+                            'text-decoration': this.is_underlined ? 'underline' : '',
+                            'font-weight': this.fweight,
+                            'font-style': this.is_italic ? 'italic' : ''
+                        };
+                        return styleobj;
+                    }
+                }
+            }
+        );
+    </script>
+</body>
+
+</html>

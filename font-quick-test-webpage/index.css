@@ -1,0 +1,12 @@
+@font-face{
+    font-family: 'testfont'; 
+    src: url('../monofurx.otf');
+	/* put the testing font file here and run the http server */
+}
+
+.test{
+    font-family: testfont,youyuan;
+    color:cyan;
+    background: black;
+    font-size: 16px;
+}
