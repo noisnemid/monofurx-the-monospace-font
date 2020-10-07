@@ -16,7 +16,7 @@ The original monofur font is a monospaced version of font EuroFurence
 
 I like this font much, but there're still optimizing spaces:
 
-The manily modifications are the heavier-weighted puncutations dots;
+The mainly modifications are the heavier-weighted puncutations dots;
 
 and a little funny part: the **ASYMMETRIC** brackets-pairs just for fun, and feel free to make them normally symmetric if you don't like them.
 
