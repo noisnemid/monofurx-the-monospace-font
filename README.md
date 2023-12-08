@@ -25,6 +25,12 @@ and a little funny part: the **ASYMMETRIC** brackets-pairs just for fun, and fee
 
 **tips: delete the old versioned monofux fonts manually completely from the system font directory, or there might be some errors for some software to select the correct versioned font/s, e.g, pycharm on windows 10**
 
+## V6.0 Memo
+
+After few years I got some new insights into typography.
+
+^_^
+
 ## V5.0 Memo
 
 July 25, 2019
